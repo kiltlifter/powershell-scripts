@@ -1,4 +1,12 @@
-﻿param (
+﻿# Author: Sean Douglas
+# Base64 encoder and decoder tool
+# e.g. .\polka-dots.ps1 -in somefile.txt -out output.txt -action decode
+# Params:
+# [string]$in: path to your input file
+# [string]$out: optional output file destination, otherwise input is overwritten
+# [string]$action: operation to perform. Valid options are encode and decode
+
+param (
     [Parameter(Mandatory=$true)][string]$in,
     [string]$out,
     [Parameter(Mandatory=$true)][ValidateSet('decode', 'encode')][string]$action
