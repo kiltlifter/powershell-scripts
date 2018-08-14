@@ -8,7 +8,7 @@
 
 param (
     [Parameter(Mandatory=$true)][string]$in,
-    [string]$out,
+    [Parameter(Mandatory=$true)][string]$out,
     [Parameter(Mandatory=$true)][ValidateSet('decode', 'encode')][string]$action
 )
 
