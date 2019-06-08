@@ -1,5 +1,4 @@
-﻿# Author: Sean Douglas
-# Base64 encoder and decoder tool
+﻿# Base64 encoder and decoder tool
 # e.g. .\polka-dots.ps1 -in somefile.txt -out output.txt -action decode
 # Params:
 # [string]$in: path to your input file
