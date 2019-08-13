@@ -34,12 +34,12 @@ function writeToFile($data) {
 
 function base64([String]$data, [bool]$encode) {
     if ($encode) {
-        $bytes = [System.Text.Encoding]::Unicode.GetBytes($data)
+        $bytes = [System.Text.Encoding]::UTF8.GetBytes($data)
         $encodedBytes = [System.Convert]::ToBase64String($bytes)
         return $encodedBytes
     } else {
         $decodedBytes = [System.Convert]::FromBase64String($data)
-        $printableString = [System.Text.Encoding]::Unicode.GetString($decodedBytes)
+        $printableString = [System.Text.Encoding]::UTF8.GetString($decodedBytes)
         return $printableString
     }
     
